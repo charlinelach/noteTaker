@@ -28,10 +28,6 @@ app.get("/notes", function (req, res) {
     res.sendFile(path.join(__dirname, "/public/notes.html"));
 });
 
-app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "/public/index.html"));
-});
-
 // GET: Reads from db.json
 app.get("/api/notes", function (err, res) {
     try {
